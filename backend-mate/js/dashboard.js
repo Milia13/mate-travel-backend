@@ -44,6 +44,13 @@
         const profile = companionProfiles[profileKey];
         if (!profile) return;
         window.currentModalUserId = profileKey;
+
+        // Actualizar botón invitar del modal con el ID real
+        const modalInviteBtn = document.querySelector('#companionProfileModal .btn-invitar');
+        if (modalInviteBtn) {
+            modalInviteBtn.dataset.user = profileKey;
+            modalInviteBtn.dataset.inviteBound = "";
+        }
         const setText = (id, value) => {
             const el = document.getElementById(id);
             if (el) el.innerText = value;

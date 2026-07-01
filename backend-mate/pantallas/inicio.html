@@ -25,7 +25,6 @@
                 <div>
                     <!-- Brand Logo -->
                     <div class="d-flex align-items-center gap-1 mb-2">
-                        <!-- Custom Green Vector Mate Icon -->
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-success align-text-bottom me-1" viewBox="0 0 24 24">
                             <line x1="13" y1="7" x2="18" y2="2" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
                             <path d="M6 9c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v3c0 4.4-3.6 7-8 7s-8-2.6-8-7V9zm2 .5H16V12c0 3.3-2.7 5-6 5s-6-1.7-6-5V9.5z" fill-rule="evenodd"/>
@@ -63,8 +62,6 @@
             <!-- MAIN CONTENT -->
             <main class="col-lg-7 col-xl-7 p-4 p-md-5 border-end">
 
-
-
                 <!-- Header Glassmorphism Welcome Banner -->
                 <div class="card bg-success bg-gradient text-white p-3 p-md-4 mb-4 text-white border-0">
                     <div class="row align-items-center">
@@ -73,7 +70,7 @@
                                 Encontrá tu compañere para la próxima aventura
                             </h1>
                             <p class="text-white text-opacity-90 small mb-0" id="welcomeSubtitle">
-                                Hola, <strong>Mateo Viajero</strong> (Aventurero Indómito). Explorá perfiles compatibles con tu estilo de viaje.
+                                Hola, <strong>Viajero</strong>. Explorá perfiles compatibles con tu estilo de viaje.
                             </p>
                         </div>
                         <div class="col-lg-6 col-xl-5 d-flex gap-3 justify-content-end align-items-center">
@@ -165,7 +162,7 @@
                             <i class="bi bi-backpack"></i> Estilo de viaje
                         </button>
                         <ul class="dropdown-menu border-success shadow">
-                            <li><a class="dropdown-item quick-filter" href="#" data-filter="Mochilero">Mochilero</a></li>
+                            <li><a class="dropdown-item quick-filter" href="#" data-filter="Mochilero">Mochilero</span></a></li>
                             <li><a class="dropdown-item quick-filter" href="#" data-filter="Confort">Confort</a></li>
                             <li><a class="dropdown-item quick-filter" href="#" data-filter="Aventura">Aventura Extrema</a></li>
                         </ul>
@@ -192,338 +189,28 @@
                     Compañeres recomendades para vos
                 </h3>
 
-                <!-- Match Cards Container -->
+                <!-- Match Cards Container — generadas dinámicamente por perfiles.js -->
                 <div class="row">
                     <div class="col-12">
-                        <!-- COMPANION CARD 1: Tomás -->
-                        <div class="card rounded-4 shadow-sm border-0 mb-4 companion-item">
-                            <div class="card-body p-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 text-center mb-3 mb-md-0">
-                                        <div class="companion-avatar-wrap mx-auto">
-                                            <img src="https://i.pravatar.cc/150?img=11" alt="Tomás">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success border-opacity-10">96% Afinidad</span>
-                                            <h4 class="fw-bold mb-0 text-body-emphasis">Tomás · 28</h4>
-                                        </div>
-                                        <p class="text-body-secondary small mb-2 companion-type-badge"><i class="bi bi-flag-fill"></i> Aventurero Mochilero</p>
-                                        <p class="text-body-secondary small mb-2">
-                                            <i class="bi bi-geo-alt-fill text-success"></i> Córdoba, Argentina
-                                        </p>
-                                        <div class="d-flex gap-2 flex-wrap mb-3">
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-map-fill text-success"></i> <span>Tailandia</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-backpack-fill text-success"></i> <span>Mochilero</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-cash-stack text-success"></i> <span>USD 800-1200</span></span>
-                                        </div>
-                                        <p class="text-body-secondary small mb-0 lh-sm">
-                                            Me encanta conocer culturas, hacer trekking y descubrir nuevos destinos locales o internacionales. ¡Busco alguien activo para armar ruta!
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3 text-end mt-3 mt-md-0">
-                                        <button type="button" class="btn btn-outline-success border-2 w-100 mb-2 rounded-pill fw-semibold py-2 btn-sm btn-view-profile" data-user="tomas">
-                                            Ver perfil
-                                        </button>
-                                        <button class="btn btn-success bg-gradient text-white rounded-pill w-100 d-flex align-items-center justify-content-center gap-2 py-2 btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                                <line x1="13" y1="7" x2="18" y2="2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-                                                <path d="M6 9c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v3c0 4.4-3.6 7-8 7s-8-2.6-8-7V9zm2 .5H16V12c0 3.3-2.7 5-6 5s-6-1.7-6-5V9.5z" fill-rule="evenodd"/>
-                                            </svg>
-                                            Invitar un mate
-                                        </button>
-                                    </div>
-                                </div>
+                        <div class="text-center py-5 text-body-secondary">
+                            <div class="spinner-border text-success" role="status">
+                                <span class="visually-hidden">Cargando...</span>
                             </div>
+                            <p class="mt-3 small">Cargando perfiles...</p>
                         </div>
-
-                        <!-- COMPANION CARD 2: Sofía -->
-                        <div class="card rounded-4 shadow-sm border-0 mb-4 companion-item">
-                            <div class="card-body p-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 text-center mb-3 mb-md-0">
-                                        <div class="companion-avatar-wrap mx-auto">
-                                            <img src="https://i.pravatar.cc/150?img=32" alt="Sofía">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success border-opacity-10">92% Afinidad</span>
-                                            <h4 class="fw-bold mb-0 text-body-emphasis">Sofía · 25</h4>
-                                        </div>
-                                        <p class="text-body-secondary small mb-2 companion-type-badge"><i class="bi bi-flag-fill"></i> Aventurera Confort</p>
-                                        <p class="text-body-secondary small mb-2">
-                                            <i class="bi bi-geo-alt-fill text-success"></i> Buenos Aires, Argentina
-                                        </p>
-                                        <div class="d-flex gap-2 flex-wrap mb-3">
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-map-fill text-success"></i> <span>Bariloche</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-cup-hot-fill text-success"></i> <span>Confort</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-cash-stack text-success"></i> <span>USD 1000-1500</span></span>
-                                        </div>
-                                        <p class="text-body-secondary small mb-0 lh-sm">
-                                            Busco relajarme en la Patagonia, conocer cafeterías de especialidad, hacer excursiones tranquilas y compartir buenas charlas con un rico mate de por medio.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3 text-end mt-3 mt-md-0">
-                                        <button type="button" class="btn btn-outline-success border-2 w-100 mb-2 rounded-pill fw-semibold py-2 btn-sm btn-view-profile" data-user="sofia">
-                                            Ver perfil
-                                        </button>
-                                        <button class="btn btn-success bg-gradient text-white rounded-pill w-100 d-flex align-items-center justify-content-center gap-2 py-2 btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                                <line x1="13" y1="7" x2="18" y2="2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-                                                <path d="M6 9c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v3c0 4.4-3.6 7-8 7s-8-2.6-8-7V9zm2 .5H16V12c0 3.3-2.7 5-6 5s-6-1.7-6-5V9.5z" fill-rule="evenodd"/>
-                                            </svg>
-                                            Invitar un mate
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- COMPANION CARD 3: Martín -->
-                        <div class="card rounded-4 shadow-sm border-0 mb-4 companion-item">
-                            <div class="card-body p-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 text-center mb-3 mb-md-0">
-                                        <div class="companion-avatar-wrap mx-auto">
-                                            <img src="https://i.pravatar.cc/150?img=60" alt="Martín">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success border-opacity-10">89% Afinidad</span>
-                                            <h4 class="fw-bold mb-0 text-body-emphasis">Martín · 31</h4>
-                                        </div>
-                                        <p class="text-body-secondary small mb-2 companion-type-badge"><i class="bi bi-flag-fill"></i> Aventurero Gasolero</p>
-                                        <p class="text-body-secondary small mb-2">
-                                            <i class="bi bi-geo-alt-fill text-success"></i> Mendoza, Argentina
-                                        </p>
-                                        <div class="d-flex gap-2 flex-wrap mb-3">
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-map-fill text-success"></i> <span>Salta / NOA</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-backpack-fill text-success"></i> <span>Aventurero</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-cash-stack text-success"></i> <span>USD 600-900</span></span>
-                                        </div>
-                                        <p class="text-body-secondary small mb-0 lh-sm">
-                                            Fan de la naturaleza salvaje, peñas folclóricas, y acampar bajo las estrellas. Planeo un viaje gasolero para recorrer los Valles Calchaquíes en julio.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3 text-end mt-3 mt-md-0">
-                                        <button type="button" class="btn btn-outline-success border-2 w-100 mb-2 rounded-pill fw-semibold py-2 btn-sm btn-view-profile" data-user="martin">
-                                            Ver perfil
-                                        </button>
-                                        <button class="btn btn-success bg-gradient text-white rounded-pill w-100 d-flex align-items-center justify-content-center gap-2 py-2 btn-sm">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 24 24">
-                                                <line x1="13" y1="7" x2="18" y2="2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
-                                                <path d="M6 9c0-1.1.9-2 2-2h8c1.1 0 2 .9 2 2v3c0 4.4-3.6 7-8 7s-8-2.6-8-7V9zm2 .5H16V12c0 3.3-2.7 5-6 5s-6-1.7-6-5V9.5z" fill-rule="evenodd"/>
-                                            </svg>
-                                            Invitar un mate
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                                            <!-- COMPANION CARD 4: Caro -->
-                        <div class="card rounded-4 shadow-sm border-0 mb-4 companion-item">
-                            <div class="card-body p-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 text-center mb-3 mb-md-0">
-                                        <div class="companion-avatar-wrap mx-auto">
-                                            <img src="https://i.pravatar.cc/150?img=5" alt="Caro">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success border-opacity-10">87% Afinidad</span>
-                                            <h4 class="fw-bold mb-0 text-body-emphasis">Caro · 27</h4>
-                                        </div>
-                                        <p class="text-body-secondary small mb-2 companion-type-badge"><i class="bi bi-flag-fill"></i> Exploradora Cultural</p>
-                                        <p class="text-body-secondary small mb-2">
-                                            <i class="bi bi-geo-alt-fill text-success"></i> Rosario, Argentina
-                                        </p>
-                                        <div class="d-flex gap-2 flex-wrap mb-3">
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-map-fill text-success"></i> <span>Misiones</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-building text-success"></i> <span>Hostel / Histórico</span></span>
-                                        </div>
-                                        <p class="text-body-secondary small mb-0 lh-sm">
-                                            Me encanta descubrir ruinas históricas, visitar museos locales y conocer la selva. Busco compañeros curiosos que les guste caminar mucho.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3 text-end mt-3 mt-md-0">
-                                        <button type="button" class="btn btn-outline-success border-2 w-100 mb-2 rounded-pill fw-semibold py-2 btn-sm btn-view-profile" data-user="caro">Ver perfil</button>
-                                        <button class="btn btn-success bg-gradient text-white rounded-pill w-100 py-2 btn-sm">Invitar un mate</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- COMPANION CARD 5: Juan -->
-                        <div class="card rounded-4 shadow-sm border-0 mb-4 companion-item">
-                            <div class="card-body p-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 text-center mb-3 mb-md-0">
-                                        <div class="companion-avatar-wrap mx-auto">
-                                            <img src="https://i.pravatar.cc/150?img=12" alt="Juan">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success border-opacity-10">85% Afinidad</span>
-                                            <h4 class="fw-bold mb-0 text-body-emphasis">Juan · 34</h4>
-                                        </div>
-                                        <p class="text-body-secondary small mb-2 companion-type-badge"><i class="bi bi-flag-fill"></i> Buscador de Confort</p>
-                                        <p class="text-body-secondary small mb-2">
-                                            <i class="bi bi-geo-alt-fill text-success"></i> CABA, Argentina
-                                        </p>
-                                        <div class="d-flex gap-2 flex-wrap mb-3">
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-map-fill text-success"></i> <span>Ushuaia</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-cup-hot-fill text-success"></i> <span>Hotel 4+ estrellas</span></span>
-                                        </div>
-                                        <p class="text-body-secondary small mb-0 lh-sm">
-                                            Priorizo el buen comer, el relax y los paseos organizados. Estoy planeando ir al Fin del Mundo para ver la nieve con todas las comodidades.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3 text-end mt-3 mt-md-0">
-                                        <button type="button" class="btn btn-outline-success border-2 w-100 mb-2 rounded-pill fw-semibold py-2 btn-sm btn-view-profile" data-user="juan">Ver perfil</button>
-                                        <button class="btn btn-success bg-gradient text-white rounded-pill w-100 py-2 btn-sm">Invitar un mate</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- COMPANION CARD 6: Lucía -->
-                        <div class="card rounded-4 shadow-sm border-0 mb-4 companion-item">
-                            <div class="card-body p-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 text-center mb-3 mb-md-0">
-                                        <div class="companion-avatar-wrap mx-auto">
-                                            <img src="https://i.pravatar.cc/150?img=20" alt="Lucía">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success border-opacity-10">81% Afinidad</span>
-                                            <h4 class="fw-bold mb-0 text-body-emphasis">Lucía · 22</h4>
-                                        </div>
-                                        <p class="text-body-secondary small mb-2 companion-type-badge"><i class="bi bi-flag-fill"></i> Exploradora Social</p>
-                                        <p class="text-body-secondary small mb-2">
-                                            <i class="bi bi-geo-alt-fill text-success"></i> La Plata, Argentina
-                                        </p>
-                                        <div class="d-flex gap-2 flex-wrap mb-3">
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-map-fill text-success"></i> <span>Costa Atlántica</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-people-fill text-success"></i> <span>Fiesta / Social</span></span>
-                                        </div>
-                                        <p class="text-body-secondary small mb-0 lh-sm">
-                                            Lo mío es la playa, las rondas de mate en la arena, conocer gente nueva en hostels y salir de noche. ¡Amo improvisar planes grupales!
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3 text-end mt-3 mt-md-0">
-                                        <button type="button" class="btn btn-outline-success border-2 w-100 mb-2 rounded-pill fw-semibold py-2 btn-sm btn-view-profile" data-user="lucia">Ver perfil</button>
-                                        <button class="btn btn-success bg-gradient text-white rounded-pill w-100 py-2 btn-sm">Invitar un mate</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- COMPANION CARD 7: Nico -->
-                        <div class="card rounded-4 shadow-sm border-0 mb-4 companion-item">
-                            <div class="card-body p-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 text-center mb-3 mb-md-0">
-                                        <div class="companion-avatar-wrap mx-auto">
-                                            <img src="https://i.pravatar.cc/150?img=59" alt="Nico">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success border-opacity-10">78% Afinidad</span>
-                                            <h4 class="fw-bold mb-0 text-body-emphasis">Nico · 29</h4>
-                                        </div>
-                                        <p class="text-body-secondary small mb-2 companion-type-badge"><i class="bi bi-flag-fill"></i> Aventurero Extremo</p>
-                                        <p class="text-body-secondary small mb-2">
-                                            <i class="bi bi-geo-alt-fill text-success"></i> Neuquén, Argentina
-                                        </p>
-                                        <div class="d-flex gap-2 flex-wrap mb-3">
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-map-fill text-success"></i> <span>Jujuy</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-mountain text-success"></i> <span>Alta Montaña</span></span>
-                                        </div>
-                                        <p class="text-body-secondary small mb-0 lh-sm">
-                                            Vivo para los deportes extremos y subir cerros. Voy al norte buscando senderos difíciles y paisajes agrestes. Necesito un compañero ágil.
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3 text-end mt-3 mt-md-0">
-                                        <button type="button" class="btn btn-outline-success border-2 w-100 mb-2 rounded-pill fw-semibold py-2 btn-sm btn-view-profile" data-user="nico">Ver perfil</button>
-                                        <button class="btn btn-success bg-gradient text-white rounded-pill w-100 py-2 btn-sm">Invitar un mate</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- COMPANION CARD 8: Valentina -->
-                        <div class="card rounded-4 shadow-sm border-0 mb-4 companion-item">
-                            <div class="card-body p-0">
-                                <div class="row align-items-center">
-                                    <div class="col-md-2 text-center mb-3 mb-md-0">
-                                        <div class="companion-avatar-wrap mx-auto">
-                                            <img src="https://i.pravatar.cc/150?img=47" alt="Valentina">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-7">
-                                        <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
-                                            <span class="badge rounded-pill bg-success bg-opacity-10 text-success border border-success border-opacity-10">75% Afinidad</span>
-                                            <h4 class="fw-bold mb-0 text-body-emphasis">Valentina · 26</h4>
-                                        </div>
-                                        <p class="text-body-secondary small mb-2 companion-type-badge"><i class="bi bi-flag-fill"></i> Buscadora de Confort</p>
-                                        <p class="text-body-secondary small mb-2">
-                                            <i class="bi bi-geo-alt-fill text-success"></i> Salta, Argentina
-                                        </p>
-                                        <div class="d-flex gap-2 flex-wrap mb-3">
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-map-fill text-success"></i> <span>Mendoza</span></span>
-                                            <span class="badge rounded-pill bg-body-tertiary text-body-secondary border border-secondary-subtle py-1 px-3 small"><i class="bi bi-cup-hot-fill text-success"></i> <span>Enoturismo</span></span>
-                                        </div>
-                                        <p class="text-body-secondary small mb-0 lh-sm">
-                                            Quiero conocer el Valle de Uco, degustar vinos de altura y hospedarme en lugares premium. Si te gusta el turismo gastronómico, ¡escribime!
-                                        </p>
-                                    </div>
-                                    <div class="col-md-3 text-end mt-3 mt-md-0">
-                                        <button type="button" class="btn btn-outline-success border-2 w-100 mb-2 rounded-pill fw-semibold py-2 btn-sm btn-view-profile" data-user="valentina">Ver perfil</button>
-                                        <button class="btn btn-success bg-gradient text-white rounded-pill w-100 py-2 btn-sm">Invitar un mate</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Pagination -->
-                        <nav aria-label="Navegación de compañeros recomendados">
-                            <ul class="pagination justify-content-center mt-5 mb-0" id="companionsPagination">
-                                <li class="page-item disabled" id="prevPageBtn">
-                                    <button class="page-link border-success text-success fw-semibold shadow-none">Anterior</button>
-                                </li>
-                                <li class="page-item active" data-page="1"><button class="page-link border-success bg-success text-white shadow-none">1</button></li>
-                                <li class="page-item" data-page="2"><button class="page-link border-success text-success shadow-none">2</button></li>
-                                <li class="page-item" data-page="3"><button class="page-link border-success text-success shadow-none">3</button></li>
-                                <li class="page-item" id="nextPageBtn">
-                                    <button class="page-link border-success text-success fw-semibold shadow-none">Siguiente</button>
-                                </li>
-                            </ul>
-                        </nav>
-</div>
+                    </div>
                 </div>
 
-                        </main>
+            </main>
 
-            <!-- RIGHT SIDEBAR (Novedades y Widgets) -->
+            <!-- RIGHT SIDEBAR -->
             <aside class="col-lg-2 col-xl-3 d-none d-lg-flex flex-column gap-4 p-4 p-xl-5 min-vh-100 bg-success-subtle border-start border-success-subtle">
-                
-                <!-- El bloque de Progreso de Perfil fue removido a pedido del usuario para evitar redundancias -->
 
                 <!-- Destinos Populares -->
                 <div class="card border-0 shadow-sm rounded-4 bg-transparent border-success-subtle">
                     <div class="card-body p-4">
                         <h6 class="fw-bold mb-4">Destinos Populares 🔥</h6>
-                        
-                        <!-- Destino 1 -->
+
                         <div class="d-flex align-items-center gap-3 mb-3 pb-3 border-bottom border-success-subtle">
                             <div class="rounded-3 overflow-hidden shadow-sm" style="width: 50px; height: 50px; flex-shrink: 0;">
                                 <img src="../images/mendoza.png" alt="Mendoza" class="w-100 h-100 object-fit-cover">
@@ -533,8 +220,7 @@
                                 <span class="text-body-secondary small"><i class="bi bi-people-fill text-success me-1"></i> 120 viajeros</span>
                             </div>
                         </div>
-                        
-                        <!-- Destino 2 -->
+
                         <div class="d-flex align-items-center gap-3 mb-3 pb-3 border-bottom border-success-subtle">
                             <div class="rounded-3 overflow-hidden shadow-sm" style="width: 50px; height: 50px; flex-shrink: 0;">
                                 <img src="../images/salta.png" alt="Salta" class="w-100 h-100 object-fit-cover">
@@ -545,7 +231,6 @@
                             </div>
                         </div>
 
-                        <!-- Destino 3 -->
                         <div class="d-flex align-items-center gap-3">
                             <div class="rounded-3 overflow-hidden shadow-sm" style="width: 50px; height: 50px; flex-shrink: 0;">
                                 <img src="../images/rio_negro.png" alt="Bariloche" class="w-100 h-100 object-fit-cover">
@@ -582,17 +267,13 @@
                                     <div class="modal-avatar-frame">
                                         <img id="modalCompanionAvatar" src="https://i.pravatar.cc/150?img=11" alt="Avatar">
                                     </div>
-                                    <h4 class="fw-bold mt-3 mb-1" id="modalCompanionName">Tomás · 28</h4>
-                                    <p class="text-body-secondary small mb-1"><i class="bi bi-geo-alt-fill text-success"></i> <span id="modalCompanionLocation">Córdoba, Argentina</span></p>
-                                    <p class="text-body-secondary small mb-2 companion-type-badge" id="modalCompanionType"><i class="bi bi-flag-fill"></i> Aventurero Mochilero</p>
-                                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-3" id="modalCompanionTags">
-                                        <span class="badge bg-body-tertiary text-body-secondary border border-secondary-subtle py-2 px-3 small"><i class="bi bi-map-fill text-success"></i> Tailandia</span>
-                                        <span class="badge bg-body-tertiary text-body-secondary border border-secondary-subtle py-2 px-3 small"><i class="bi bi-backpack-fill text-success"></i> Mochilero</span>
-                                        <span class="badge bg-body-tertiary text-body-secondary border border-secondary-subtle py-2 px-3 small"><i class="bi bi-cash-stack text-success"></i> USD 800 - 1200</span>
-                                    </div>
+                                    <h4 class="fw-bold mt-3 mb-1" id="modalCompanionName">Nombre</h4>
+                                    <p class="text-body-secondary small mb-1"><i class="bi bi-geo-alt-fill text-success"></i> <span id="modalCompanionLocation">Ubicación</span></p>
+                                    <p class="text-body-secondary small mb-2 companion-type-badge" id="modalCompanionType"><i class="bi bi-flag-fill"></i> Tipo</p>
+                                    <div class="d-flex flex-wrap justify-content-center gap-2 mb-3" id="modalCompanionTags"></div>
                                     <div class="d-flex justify-content-center gap-2">
                                         <button type="button" class="btn btn-outline-secondary rounded-pill px-4 py-2" data-bs-dismiss="modal">Cerrar</button>
-                                        <button type="button" class="btn btn-success rounded-pill px-4 py-2">Invitar un mate</button>
+                                        <button type="button" class="btn btn-success rounded-pill px-4 py-2 btn-invitar" data-user="">Invitar un mate</button>
                                     </div>
                                 </div>
                             </div>
@@ -600,30 +281,30 @@
                         <div class="col-lg-8">
                             <div class="card border-0 rounded-4 shadow-sm p-4">
                                 <h5 class="fw-bold mb-3">Sobre mí</h5>
-                                <p class="text-body-secondary small mb-4" id="modalCompanionAbout">Me encanta conocer culturas, hacer trekking y descubrir nuevos destinos locales o internacionales. Busco alguien activo para armar ruta.</p>
+                                <p class="text-body-secondary small mb-4" id="modalCompanionAbout"></p>
                                 <div class="row g-3">
                                     <div class="col-sm-6">
                                         <div class="d-flex justify-content-between align-items-start gap-2">
                                             <span class="text-body-secondary small">Estilo de viaje</span>
-                                            <strong id="modalCompanionStyle" class="text-body-emphasis small">Mochilero</strong>
+                                            <strong id="modalCompanionStyle" class="text-body-emphasis small"></strong>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="d-flex justify-content-between align-items-start gap-2">
                                             <span class="text-body-secondary small">Presupuesto</span>
-                                            <strong id="modalCompanionBudget" class="text-body-emphasis small">USD 800 - 1200</strong>
+                                            <strong id="modalCompanionBudget" class="text-body-emphasis small"></strong>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="d-flex justify-content-between align-items-start gap-2">
                                             <span class="text-body-secondary small">Fechas</span>
-                                            <strong id="modalCompanionDates" class="text-body-emphasis small">01 Jun - 20 Jun</strong>
+                                            <strong id="modalCompanionDates" class="text-body-emphasis small"></strong>
                                         </div>
                                     </div>
                                     <div class="col-sm-6">
                                         <div class="d-flex justify-content-between align-items-start gap-2">
                                             <span class="text-body-secondary small">Idiomas</span>
-                                            <strong id="modalCompanionLanguages" class="text-body-emphasis small">Español, Inglés</strong>
+                                            <strong id="modalCompanionLanguages" class="text-body-emphasis small"></strong>
                                         </div>
                                     </div>
                                 </div>
@@ -638,8 +319,6 @@
             </div>
         </div>
     </div>
-
-    
 
     <!-- MATCH OVERLAY MODAL -->
     <div class="modal fade" id="matchModal" tabindex="-1" data-bs-backdrop="static">
@@ -673,9 +352,6 @@
         </div>
         <div class="offcanvas-body p-0 d-flex flex-column">
             <div class="chat-container flex-grow-1 d-flex flex-column" id="chatMessages">
-                <!-- Messages will be appended here -->
-                
-                <!-- Typing Indicator -->
                 <div class="typing-indicator" id="chatTypingIndicator">
                     <div class="typing-dot"></div>
                     <div class="typing-dot"></div>
@@ -684,7 +360,6 @@
             </div>
             <div class="chat-input-wrapper mt-auto">
                 <form id="chatForm" class="d-flex gap-2">
-
                     <input type="text" class="form-control rounded-pill shadow-none border-secondary-subtle" placeholder="Escribí un mensaje..." id="chatInput">
                     <button type="submit" class="btn btn-success rounded-circle d-flex align-items-center justify-content-center shadow-sm">
                         <i class="bi bi-send-fill"></i>
@@ -703,10 +378,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <!-- Scripts Externos -->
     <script src="../js/chat.js"></script>
+    <script src="../js/perfiles.js"></script>
     <script src="../js/dashboard.js"></script>
 </body>
 
 </html>
-
-
-
