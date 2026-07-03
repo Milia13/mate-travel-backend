@@ -1,3 +1,14 @@
+(function checkAuth() {
+    if (!localStorage.getItem('user_name')) {
+        window.location.replace('../index.html');
+    }
+    window.addEventListener('pageshow', function(event) {
+        if (event.persisted && !localStorage.getItem('user_name')) {
+            window.location.replace('../index.html');
+        }
+    });
+})();
+
 (function() {
     const userName = localStorage.getItem('user_name');
     const profileProgress = localStorage.getItem('user_profile_progress');
@@ -35,22 +46,127 @@
     
 
 
-    document.addEventListener('perfilesListos', function() {
-    const companionProfiles = window.companionProfilesData || {};
+    // Companion modal profiles data
+    const companionProfiles = {
+        tomas: {
+            name: 'Tomás',
+            age: 28,
+            location: 'Córdoba, Argentina',
+            type: 'Aventurero Mochilero',
+            about: 'Me encanta conocer culturas, hacer trekking y descubrir nuevos destinos locales o internacionales. ¡Busco alguien activo para armar ruta!',
+            destination: 'Tailandia',
+            dates: '01 Jun - 20 Jun',
+            budget: 'USD 800 - 1200',
+            style: 'Mochilero',
+            interests: ['Trekking', 'Fotografía', 'Comida local'],
+            languages: 'Español, Inglés',
+            avatar: 'https://i.pravatar.cc/150?img=11'
+        },
+        sofia: {
+            name: 'Sofía',
+            age: 25,
+            location: 'Buenos Aires, Argentina',
+            type: 'Aventurera Confort',
+            about: 'Busco relajarme en la Patagonia, conocer cafeterías de especialidad, hacer excursiones tranquilas y compartir buenas charlas con un rico mate de por medio.',
+            destination: 'Bariloche',
+            dates: '08 Jul - 18 Jul',
+            budget: 'USD 1000 - 1500',
+            style: 'Confort',
+            interests: ['Cultura', 'Café', 'Senderismo suave'],
+            languages: 'Español, Inglés',
+            avatar: 'https://i.pravatar.cc/150?img=32'
+        },
+        martin: {
+            name: 'Martín',
+            age: 31,
+            location: 'Mendoza, Argentina',
+            type: 'Aventurero Gasolero',
+            about: 'Fan de la naturaleza salvaje, peñas folclóricas, y acampar bajo las estrellas. Planeo un viaje gasolero para recorrer los Valles Calchaquíes en julio.',
+            destination: 'Salta / NOA',
+            dates: '10 Jun - 25 Jun',
+            budget: 'USD 600 - 900',
+            style: 'Aventurero',
+            interests: ['Camping', 'Folclore', 'Trekking'],
+            languages: 'Español',
+            avatar: 'https://i.pravatar.cc/150?img=60'
+        },
+        caro: {
+            name: 'Caro',
+            age: 27,
+            location: 'Rosario, Argentina',
+            type: 'Exploradora Cultural',
+            about: 'Me encanta descubrir ruinas históricas, visitar museos locales y conocer la selva. Busco compañeros curiosos que les guste caminar mucho.',
+            destination: 'Misiones',
+            dates: '15 Ago - 25 Ago',
+            budget: 'USD 500 - 800',
+            style: 'Cultural',
+            interests: ['Historia', 'Caminatas', 'Museos'],
+            languages: 'Español, Portugués',
+            avatar: 'https://i.pravatar.cc/150?img=5'
+        },
+        juan: {
+            name: 'Juan',
+            age: 34,
+            location: 'CABA, Argentina',
+            type: 'Buscador de Confort',
+            about: 'Priorizo el buen comer, el relax y los paseos organizados. Estoy planeando ir al Fin del Mundo para ver la nieve con todas las comodidades.',
+            destination: 'Ushuaia',
+            dates: '10 Jul - 20 Jul',
+            budget: 'USD 1500 - 2500',
+            style: 'Confort',
+            interests: ['Gastronomía', 'Esquí', 'Relax'],
+            languages: 'Español, Inglés',
+            avatar: 'https://i.pravatar.cc/150?img=12'
+        },
+        lucia: {
+            name: 'Lucía',
+            age: 22,
+            location: 'La Plata, Argentina',
+            type: 'Exploradora Social',
+            about: 'Lo mío es la playa, las rondas de mate en la arena, conocer gente nueva en hostels y salir de noche. ¡Amo improvisar planes grupales!',
+            destination: 'Costa Atlántica',
+            dates: '01 Ene - 15 Ene',
+            budget: 'USD 300 - 600',
+            style: 'Social',
+            interests: ['Playa', 'Fiesta', 'Amigos'],
+            languages: 'Español',
+            avatar: 'https://i.pravatar.cc/150?img=20'
+        },
+        nico: {
+            name: 'Nico',
+            age: 29,
+            location: 'Neuquén, Argentina',
+            type: 'Aventurero Extremo',
+            about: 'Vivo para los deportes extremos y subir cerros. Voy al norte buscando senderos difíciles y paisajes agrestes. Necesito un compañero ágil.',
+            destination: 'Jujuy',
+            dates: '05 Sep - 15 Sep',
+            budget: 'USD 400 - 700',
+            style: 'Aventurero',
+            interests: ['Alpinismo', 'Trail Running', 'Camping'],
+            languages: 'Español',
+            avatar: 'https://i.pravatar.cc/150?img=59'
+        },
+        valentina: {
+            name: 'Valentina',
+            age: 26,
+            location: 'Salta, Argentina',
+            type: 'Buscadora de Confort',
+            about: 'Quiero conocer el Valle de Uco, degustar vinos de altura y hospedarme en lugares premium. Si te gusta el turismo gastronómico, ¡escribime!',
+            destination: 'Mendoza',
+            dates: '12 Oct - 20 Oct',
+            budget: 'USD 1200 - 1800',
+            style: 'Confort / Enoturismo',
+            interests: ['Vinos', 'Gourmet', 'Paisajes'],
+            languages: 'Español, Inglés',
+            avatar: 'https://i.pravatar.cc/150?img=47'
+        }
+    };
+
     const companionModal = document.getElementById('companionProfileModal');
     const bsCompanionModal = companionModal ? new bootstrap.Modal(companionModal) : null;
 
     function openCompanionModal(profileKey) {
-        const profile = companionProfiles[profileKey];
-        if (!profile) return;
-        window.currentModalUserId = profileKey;
-
-        // Actualizar botón invitar del modal con el ID real
-        const modalInviteBtn = document.querySelector('#companionProfileModal .btn-invitar');
-        if (modalInviteBtn) {
-            modalInviteBtn.dataset.user = profileKey;
-            modalInviteBtn.dataset.inviteBound = "";
-        }
+        const profile = companionProfiles[profileKey] || companionProfiles.tomas;
         const setText = (id, value) => {
             const el = document.getElementById(id);
             if (el) el.innerText = value;
@@ -110,7 +226,7 @@
         btn.addEventListener('click', function(e) {
             e.preventDefault();
             localStorage.clear();
-            window.location.href = '../index.html';
+            window.location.replace('../index.html');
         });
     });
 
@@ -422,74 +538,95 @@
 
     // Attach click events to "Invitar un mate" buttons
     function attachInviteEvents() {
-        document.querySelectorAll('.btn-invitar').forEach(btn => {
-            if (btn.dataset.inviteBound) return;
-            btn.dataset.inviteBound = "true";
+        const sentMates = JSON.parse(localStorage.getItem('sentMates') || '[]');
+        
+        document.querySelectorAll('button').forEach(btn => {
+            if (btn.innerText.includes('Invitar un mate')) {
+                // To prevent multiple bindings
+                if (btn.dataset.inviteBound) return;
+                btn.dataset.inviteBound = "true";
+                
+                let targetName = "Viajero";
+                let targetAvatarSrc = "https://i.pravatar.cc/150?img=11";
+                
+                // Try to find context (is it in the modal or in a card?)
+                const card = btn.closest('.companion-item');
+                if (card) {
+                    const nameEl = card.querySelector('h4');
+                    if (nameEl) targetName = nameEl.innerText.split('·')[0].trim();
+                    const imgEl = card.querySelector('img');
+                    if (imgEl) targetAvatarSrc = imgEl.src;
+                } else {
+                    // Modal context
+                    const nameEl = document.getElementById('modalCompanionName');
+                    if (nameEl) targetName = nameEl.innerText.split('·')[0].trim();
+                    const imgEl = document.getElementById('modalCompanionAvatar');
+                    if (imgEl) targetAvatarSrc = imgEl.src;
+                }
+                
+                // Check if already sent
+                if (sentMates.includes(targetName)) {
+                    btn.innerHTML = '<i class="bi bi-check-circle-fill"></i> Enviado';
+                    btn.classList.remove('btn-success', 'btn-outline-success');
+                    btn.classList.add('btn-secondary');
+                    btn.disabled = true;
+                    return; // skip adding click event
+                }
+                
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Save to localStorage
+                    const currentSent = JSON.parse(localStorage.getItem('sentMates') || '[]');
+                    if (!currentSent.includes(targetName)) {
+                        currentSent.push(targetName);
+                        localStorage.setItem('sentMates', JSON.stringify(currentSent));
+                    }
+                    
+                    // Disable button
+                    this.innerHTML = '<i class="bi bi-check-circle-fill"></i> Enviado';
+                    this.classList.remove('btn-success', 'btn-outline-success');
+                    this.classList.add('btn-secondary');
+                    this.disabled = true;
 
-            const targetId = btn.dataset.user;
-            const card = btn.closest('.companion-item');
-            let targetName = "Viajero";
-            let targetAvatarSrc = "https://i.pravatar.cc/150?img=11";
+                    // Flying mate animation
+                    const mateIcon = document.createElement('div');
+                    mateIcon.innerText = '🧉';
+                    mateIcon.style.position = 'fixed';
+                    mateIcon.style.left = e.clientX + 'px';
+                    mateIcon.style.top = e.clientY + 'px';
+                    mateIcon.style.fontSize = '2rem';
+                    mateIcon.style.pointerEvents = 'none';
+                    mateIcon.style.zIndex = '9999';
+                    mateIcon.style.transition = 'all 1.2s cubic-bezier(0.34, 1.56, 0.64, 1)';
+                    document.body.appendChild(mateIcon);
 
-            if (card) {
-                const nameEl = card.querySelector('h4');
-                if (nameEl) targetName = nameEl.innerText.split('·')[0].trim();
-                const imgEl = card.querySelector('img');
-                if (imgEl) targetAvatarSrc = imgEl.src;
-            }
+                    // Trigger reflow
+                    mateIcon.getBoundingClientRect();
 
-            if (!targetId) return;
+                    // Animate to center, spin and scale up
+                    const centerX = window.innerWidth / 2;
+                    const centerY = window.innerHeight / 2;
+                    const moveX = centerX - e.clientX - 16;
+                    const moveY = centerY - e.clientY - 16;
 
-            btn.addEventListener('click', async function(e) {
-                e.preventDefault();
+                    mateIcon.style.transform = `translate(${moveX}px, ${moveY}px) scale(5) rotate(720deg)`;
+                    mateIcon.style.opacity = '0';
 
-                this.disabled = true;
-                const originalHTML = this.innerHTML;
-                this.innerHTML = '<span class="spinner-border spinner-border-sm"></span> Enviando...';
+                    setTimeout(() => mateIcon.remove(), 1200);
 
-                // Animación mate volador
-                const mateIcon = document.createElement('div');
-                mateIcon.innerText = '🧉';
-                mateIcon.style.cssText = `position:fixed;left:${e.clientX}px;top:${e.clientY}px;font-size:2rem;pointer-events:none;z-index:9999;transition:all 1.2s cubic-bezier(0.34,1.56,0.64,1)`;
-                document.body.appendChild(mateIcon);
-                mateIcon.getBoundingClientRect();
-                const moveX = window.innerWidth / 2 - e.clientX - 16;
-                const moveY = window.innerHeight / 2 - e.clientY - 16;
-                mateIcon.style.transform = `translate(${moveX}px,${moveY}px) scale(5) rotate(720deg)`;
-                mateIcon.style.opacity = '0';
-                setTimeout(() => mateIcon.remove(), 1200);
-
-                try {
-                    const token = localStorage.getItem('token');
-                    const response = await fetch(`/api/matches/invitar/${targetId}`, {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                            'Authorization': `Bearer ${token}`
-                        }
-                    });
-                    const data = await response.json();
-
-                    setTimeout(() => {
-                        this.innerHTML = '<i class="bi bi-check-circle-fill"></i> Enviado';
-                        this.classList.remove('btn-success');
-                        this.classList.add('btn-secondary');
-
-                        if (data.hayMatch) {
+                    // 100% chance to match para la presentación
+                    if (true) {
+                        setTimeout(() => {
                             removeCompanionByName(targetName);
                             simulateMatchAndChat(targetName, targetAvatarSrc);
-                        }
-                    }, 1200);
-
-                } catch (err) {
-                    console.error('Error al invitar:', err);
-                    this.disabled = false;
-                    this.innerHTML = originalHTML;
-                }
-            });
+                        }, 1200);
+                    }
+                });
+            }
         });
     }
-
+    
     // Initial attach
     attachInviteEvents();
 
@@ -508,5 +645,5 @@
             }
         });
     }
-    }); // end perfilesListos listener
+
 })();
